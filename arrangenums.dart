@@ -2,25 +2,15 @@
 // 작성자 김지은
 
 void main() {
-  List<int> nums1 = [0];
-  List<int> nums2 = [1];
+  List<int> nums1 = [1,2,3,0,0,0];
+  List<int> nums2 = [2,5,6];
 
-  for (int k = nums1.length-1; k >= 0; k--) {
-    if (nums1[k] == 0) {
-      nums1.removeAt(k);
-    }
-  }
-
-  for (int l = nums2.length-1; l >= 0; l--) {
-    if (nums2[l] == 0) {
-      nums2.removeAt(l);
-    }
-  }
+  nums1.removeWhere((element) => element == 0);
+  nums2.removeWhere((element) => element == 0);
 
   for (int i = nums2.length-1; i >= 0; i--) {
     nums1.add(nums2[i]);
   }
-
   nums1.sort();
   print(nums1);
 }
