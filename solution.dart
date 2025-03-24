@@ -5,7 +5,6 @@ class Solution {
   int maxProfit(List<int> prices) {
     int min = prices[0];
     int maxPrice = 0;
-    int result = 0;
     for(var i  = 0; i < prices.length; i++) {
         if(min > prices[i]) {
             min = prices[i];
